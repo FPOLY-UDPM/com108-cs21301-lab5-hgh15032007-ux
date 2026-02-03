@@ -11,19 +11,43 @@
 //  giá trị lớn nhất giữa 3 số 
 
 #include <stdio.h>
-
-// //Tạo hàm 
-// int tenHam(so1, so2, so3){ 
-// int max; 
-// //Cách giải để tìm ra số lớn nhất 
-// return max; 
-// } 
-
+float SoLonNhat(float so1, float so2, float so3) {
+    float sln;
+    if (so1 >= so2 && so1 >= so3) {
+        sln = so1;
+    } 
+    else if (so2 >= so1 && so2 >= so3) {
+        sln = so2;
+    } 
+    else {
+        sln = so3;
+    }
+        printf("So lon nhat la: %.1f\n", sln);
+    return sln;
+}
+float SoNhoNhat(float so1, float so2, float so3) {
+    float snn;
+    if (so1 <= so2 && so1 <= so3) {
+        snn = so1;
+    } 
+    else if (so2 <= so1 && so2 <= so3) {
+        snn = so2;
+    } 
+    else {
+        snn = so3;
+    }
+        printf("So nho nhat la: %.1f\n", snn);
+    return snn;
+}
 int main() {
-
-    // //Gọi hàm trong hàm main 
-    // //ví dụ 
-    // int soMax = temHam(3,5,10)
-    
+    float so1, so2, so3;
+    printf("Nhap so thu nhat: ");
+    scanf("%f", &so1);
+    printf("Nhap so thu hai: ");
+    scanf("%f", &so2);
+    printf("Nhap so thu ba: ");
+    scanf("%f", &so3);
+    SoLonNhat(so1, so2, so3);
+    SoNhoNhat(so1, so2, so3);
     return 0;
 }
