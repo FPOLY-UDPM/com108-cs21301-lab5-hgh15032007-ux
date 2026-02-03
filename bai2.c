@@ -11,13 +11,22 @@
 //  chia hết cho 100 
  
 #include <stdio.h>
-
-//Tạo hàm 
-
+int KiemTraNamNhuan(int nam) {
+    if (nam % 400 == 0 || (nam % 4 == 0 && nam % 100 != 0)) {
+        return 1;
+    } else {
+        return 0; 
+    }
+}
 int main() {
-
-    // //Gọi hàm trong hàm main 
-    
+    int nam;
+    printf("Nhập năm: ");
+    scanf("%d", &nam); 
+    if (KiemTraNamNhuan(nam) == 1) {
+        printf("Năm %d là năm nhuận.\n", nam);
+    } else {
+        printf("Năm %d là năm không nhuận.\n", nam);
+    }
     return 0;
 }
 
